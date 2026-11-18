@@ -1,0 +1,76 @@
+name: responsi_template
+description: "Kerangka Flutter modular untuk persiapan Responsi PAM."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ─── DEPENDENCY WAJIB ─────────────────────────────────────────────────────
+  # [GANTI SAAT RESPONSI: Pastikan semua package di bawah ada di pubspec.yaml]
+
+  # HTTP requests ke REST API (Modul V)
+  http: ^1.2.0
+
+  # Menyimpan sesi login & preferensi lokal (Modul III)
+  shared_preferences: ^2.2.3
+
+  # Database lokal berbasis key-value (Modul VI)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Membuka URL di browser / intent ke app lain (Modul V)
+  url_launcher: ^6.3.0
+
+  # Icon bawaan Flutter
+  cupertino_icons: ^1.0.8
+
+  # ─── DEPENDENCY OPSIONAL ──────────────────────────────────────────────────
+  # [GANTI SAAT RESPONSI: Uncomment package di bawah sesuai kebutuhan soal]
+
+  # Notifikasi lokal — Immediate & Scheduled (Modul VII)
+  # flutter_local_notifications: ^17.2.4
+  # timezone: ^0.9.4
+
+  # Lokasi / GPS (Modul VIII)
+  # geolocator: ^13.0.2
+  # geocoding: ^3.0.0
+
+  # State management GetX (jika soal meminta)
+  # get: ^4.6.6
+
+  # Cached network image (opsional, biar gambar lebih smooth)
+  # cached_network_image: ^3.4.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+  # ─── BUILD RUNNER untuk Hive TypeAdapter ────────────────────────────────
+  # [GANTI SAAT RESPONSI: Jalankan perintah ini setiap kali mengubah field di favorite_item.dart]
+  # dart run build_runner build --delete-conflicting-outputs
+  build_runner: ^2.4.9
+  hive_generator: ^2.0.1
+  analyzer: '>=6.0.0 <7.0.0'
+
+flutter:
+  uses-material-design: true
+
+  # [GANTI SAAT RESPONSI: Tambahkan asset folder jika soal menggunakan gambar lokal]
+  # assets:
+  #   - assets/images/
+  #   - assets/icons/
+
+  # [GANTI SAAT RESPONSI: Tambahkan font custom jika dibutuhkan]
+  # fonts:
+  #   - family: Poppins
+  #     fonts:
+  #       - asset: assets/fonts/Poppins-Regular.ttf
+  #       - asset: assets/fonts/Poppins-Bold.ttf
+  #         weight: 700
